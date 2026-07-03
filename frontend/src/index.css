@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ===========================
+   VARIABLES GLOBALES
+=========================== */
+
+:root {
+  --primary: #E89AB7;
+  --primary-light: #F7C8D8;
+  --secondary: #DCCEF9;
+
+  --background: #FFF9FC;
+  --surface: #FFFFFF;
+
+  --text: #2E2E2E;
+  --text-light: #6B7280;
+
+  --border: #ECECEC;
+
+  --success: #25D366;
+
+  --shadow: 0 8px 25px rgba(0,0,0,.08);
+
+  --radius: 16px;
+
+  --transition: all .3s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--background);
+    color:var(--text);
+    line-height:1.6;
+}
+
+/* ===========================
+   ELEMENTOS
+=========================== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+    border:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* ===========================
+   CONTENEDOR
+=========================== */
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
 }
