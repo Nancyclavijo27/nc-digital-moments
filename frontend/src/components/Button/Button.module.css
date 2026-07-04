@@ -1,0 +1,126 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+/*==========================
+TAMAÑOS
+==========================*/
+
+.small{
+    padding:10px 20px;
+    font-size:14px;
+}
+
+.medium{
+    padding:14px 28px;
+    font-size:16px;
+}
+
+.large{
+    padding:16px 34px;
+    font-size:17px;
+}
+
+/*==========================
+PRIMARY
+==========================*/
+
+.primary{
+
+    background:var(--primary);
+
+    color:white;
+
+    border:2px solid var(--primary);
+
+}
+
+.primary:hover{
+
+    background:#d97da0;
+
+    border-color:#d97da0;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 24px rgba(232,154,183,.30);
+
+}
+
+/*==========================
+SECONDARY
+==========================*/
+
+.secondary{
+
+    background:white;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.secondary:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+/*==========================
+OUTLINE
+==========================*/
+
+.outline{
+
+    background:transparent;
+
+    color:var(--text);
+
+    border:2px solid var(--border);
+
+}
+
+.outline:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+.medium{
+
+padding:13px 24px;
+
+}
+
+.large{
+
+padding:14px 28px;
+
+}
+
+}
