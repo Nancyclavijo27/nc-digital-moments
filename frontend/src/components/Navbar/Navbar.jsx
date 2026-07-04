@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import { useEffect } from "react";
+import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
 
 import styles from "./Navbar.module.css";
 
@@ -23,13 +24,13 @@ function Navbar() {
 },[menuOpen]);
 
   const menuItems = [
-    { name: "Inicio", path: "/" },
-    { name: "Invitaciones", path: "/invitaciones" },
-    { name: "Tarjetas", path: "/tarjetas" },
-    { name: "Fechas Especiales", path: "/fechas-especiales" },
-    { name: "Precios", path: "/precios" },
-    { name: "Contacto", path: "/contacto" }
-  ];
+  { name: "Inicio", path: "/" },
+  { name: "Invitaciones", path: "/invitaciones" },
+  { name: "Servicios", path: "/servicios" },
+  { name: "Precios", path: "/precios" },
+  { name: "Nosotros", path: "/nosotros" },
+  { name: "Contacto", path: "/contacto" },
+];
 
   useEffect(() => {
   return () => {
@@ -106,18 +107,7 @@ function Navbar() {
 
           {/* ========= WHATSAPP ========= */}
 
-          <a
-            href="https://wa.me/573222039361"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.whatsapp}
-          >
-
-            <FaWhatsapp />
-
-            <span>WhatsApp</span>
-
-          </a>
+          <WhatsAppButton className={styles.whatsapp} />
 
           {/* ========= MENU MOVIL ========= */}
 

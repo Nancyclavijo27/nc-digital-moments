@@ -4,8 +4,8 @@ import Layout from "../components/Layout/Layout";
 
 import Home from "../pages/Home/Home";
 import Invitaciones from "../pages/Invitaciones/Invitaciones";
-import Tarjetas from "../pages/Tarjetas/Tarjetas";
-import FechasEspeciales from "../pages/FechasEspeciales/FechasEspeciales";
+import Nosotros from "../pages/Nosotros/Nosotros";
+import Servicios from "../pages/Servicios/Servicios";
 import Precios from "../pages/Precios/Precios";
 import Contacto from "../pages/Contacto/Contacto";
 
@@ -33,19 +33,10 @@ function AppRouter() {
         />
 
         <Route
-          path="/tarjetas"
+          path="/servicios"
           element={
             <Layout>
-              <Tarjetas />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/fechas-especiales"
-          element={
-            <Layout>
-              <FechasEspeciales />
+              <Servicios />
             </Layout>
           }
         />
@@ -55,6 +46,15 @@ function AppRouter() {
           element={
             <Layout>
               <Precios />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/nosotros"
+          element={
+            <Layout>
+              <Nosotros />
             </Layout>
           }
         />

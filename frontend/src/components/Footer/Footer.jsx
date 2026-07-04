@@ -1,132 +1,128 @@
-import styles from "./Footer.module.css";
+import { NavLink } from "react-router-dom";
 import {
-  FaWhatsapp,
   FaEnvelope,
   FaInstagram,
   FaLinkedin,
+  FaMapMarkerAlt,
   FaHeart,
 } from "react-icons/fa";
+
+import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
+
+import styles from "./Footer.module.css";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-
       <div className="container">
-
         <div className={styles.grid}>
-
-          {/* Marca */}
+          {/* ================= LOGO ================= */}
 
           <div>
+            <NavLink to="/" className={styles.logo}>
+              <div className={styles.logoIcon}>NC</div>
 
-            <div className={styles.logo}>
-
-              <div className={styles.logoIcon}>
-                NC
-              </div>
-
-              <div>
-
+              <div className={styles.logoText}>
                 <h2>NC Digital</h2>
-
                 <span>Moments</span>
-
               </div>
-
-            </div>
+            </NavLink>
 
             <p className={styles.description}>
-              Invitaciones y tarjetas digitales personalizadas para hacer
-              inolvidables tus momentos más especiales.
+              Soluciones digitales para celebrar, conectar y crecer.
             </p>
 
+            <div className={styles.buttonContainer}>
+              <WhatsAppButton text="Escríbenos" />
+            </div>
           </div>
 
-          {/* Navegación */}
+          {/* ================= NAVEGACIÓN ================= */}
 
           <div>
+            <h3 className={styles.title}>Explora</h3>
 
-            <h3>Explora</h3>
-
-            <ul>
-
-              <li>Inicio</li>
-
-              <li>Invitaciones</li>
-
-              <li>Tarjetas</li>
-
-              <li>Fechas Especiales</li>
-
-              <li>Precios</li>
-
-              <li>Contacto</li>
-
-            </ul>
-
-          </div>
-
-          {/* Contacto */}
-
-          <div>
-
-            <h3>Contacto</h3>
-
-            <ul>
-
-              <li>
-                <FaWhatsapp />
-                WhatsApp
+            <ul className={styles.list}>
+              <li className={styles.item}>
+                <NavLink to="/">Inicio</NavLink>
               </li>
 
-              <li>
+              <li className={styles.item}>
+                <NavLink to="/invitaciones">Invitaciones</NavLink>
+              </li>
+
+              <li className={styles.item}>
+                <NavLink to="/servicios">Servicios</NavLink>
+              </li>
+
+              <li className={styles.item}>
+                <NavLink to="/precios">Precios</NavLink>
+              </li>
+
+              <li className={styles.item}>
+                <NavLink to="/nosotros">Nosotros</NavLink>
+              </li>
+
+              <li className={styles.item}>
+                <NavLink to="/contacto">Contacto</NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* ================= CONTACTO ================= */}
+
+          <div>
+            <h3 className={styles.title}>Contacto</h3>
+
+            <ul className={styles.list}>
+              <li className={styles.item}>
                 <FaEnvelope />
-                clavijovarela@gmail.com
+
+                <a href="mailto:clavijovarela@gmail.com">
+                  clavijovarela@gmail.com
+                </a>
               </li>
 
-              <li>Bogotá • Colombia</li>
+              <li className={styles.item}>
+                <FaMapMarkerAlt />
 
+                Bogotá, Colombia
+              </li>
             </ul>
-
           </div>
 
-          {/* Redes */}
+          {/* ================= REDES ================= */}
 
           <div>
-
-            <h3>Sígueme</h3>
+            <h3 className={styles.title}>Sígueme</h3>
 
             <div className={styles.social}>
-
-              <a href="/">
+              <a
+                href="nancy lavijo"
+                aria-label="Instagram"
+              >
                 <FaInstagram />
               </a>
 
               <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noreferrer"
+                href="https://www.linkedin.com/in/nancy-clavijo-varela-29353117a"
+                aria-label="LinkedIn"
               >
                 <FaLinkedin />
               </a>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
+
+      {/* ================= COPYRIGHT ================= */}
 
       <div className={styles.bottom}>
-
         <p>
-          © 2026 NC Digital Moments · Hecho con{" "}
+          © {new Date().getFullYear()} NC Digital Moments · Hecho con{" "}
           <FaHeart className={styles.heart} /> en Colombia.
         </p>
-
       </div>
-
     </footer>
   );
 }

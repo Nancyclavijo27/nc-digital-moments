@@ -8,6 +8,8 @@
   z-index: 1000;
   background: var(--surface);
   box-shadow: var(--shadow);
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.95);
 }
 
 /* ===========================
@@ -157,37 +159,8 @@
 /* ===========================
    BOTON WHATSAPP
 =========================== */
-
 .whatsapp {
-
   display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  padding: 12px 22px;
-
-  background: #25D366;
-
-  color: white;
-
-  border-radius: 40px;
-
-  font-weight: 600;
-
-  transition: all .35s ease;
-
-}
-
-.whatsapp:hover {
-
-  transform:translateY(-4px) scale(1.03);
-
-  box-shadow: var(--shadow);
-
-  
-
 }
 
 /* ===========================
