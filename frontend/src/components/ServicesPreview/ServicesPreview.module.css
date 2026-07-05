@@ -1,0 +1,104 @@
+.services {
+  padding: 75px 0;
+}
+
+.badge {
+
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 10px 18px;
+
+  margin-bottom: 22px;
+
+  border-radius: 999px;
+
+  background: rgba(232,154,183,.15);
+
+  color: var(--primary);
+
+  font-size: .9rem;
+
+  font-weight: 500;
+
+}
+
+.title{
+
+  margin:0;
+
+  margin-bottom:18px;
+
+  font-size:clamp(2rem,4vw,3rem);
+
+  font-weight:800;
+
+  line-height:1.2;
+
+  color:var(--text);
+
+  max-width:650px;
+
+}
+
+/* CONTENEDOR DEL CARRUSEL */
+
+.slider {
+
+  display: flex;
+
+  gap: 20px;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+
+  padding-bottom: 10px;
+
+}
+
+/* Barra del scroll */
+
+.slider::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+.slider::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:50px;
+
+}
+
+.slider::-webkit-scrollbar-track{
+
+background:#f3f3f3;
+
+}
+
+/* Cada tarjeta */
+
+.item{
+
+flex:0 0 280px;
+
+scroll-snap-align:start;
+
+}
+
+@media(max-width:768px){
+
+.item{
+
+flex:0 0 240px;
+
+}
+
+}
