@@ -1,0 +1,215 @@
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+
+/* Parte superior: texto + imagen */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+
+/* Información izquierda */
+.info {
+  flex: 1;
+  max-width: 600px;
+}
+
+
+.badge {
+  display: inline-block;
+  background: #ffe5ec;
+  color: #e63972;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.title {
+  font-size: 38px;
+  margin: 18px 0 12px;
+  color: #222;
+}
+
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+
+/* Etiquetas */
+.tags {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+
+.tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  background: #fafafa;
+
+  padding: 12px 16px;
+
+  border-radius: 18px;
+
+  min-width: 140px;
+
+  text-align: center;
+}
+
+
+.tagIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+
+  color: var(--primary);
+}
+
+
+.tag span {
+  font-size: 13px;
+  color: #444;
+}
+
+/* Imagen derecha */
+.image {
+  flex: 0 0 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.image img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+
+
+/* Temporadas abajo */
+.temporadas {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  width: 100%;
+}
+
+
+/* Cada temporada */
+.temporada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 8px;
+
+  border-radius: 18px;
+  background: #fafafa;
+
+  text-align: center;
+  gap: 8px;
+}
+
+
+.icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 25px;
+  color: var(--primary);
+}
+
+
+.temporada span {
+  font-size: 13px;
+  color: #444;
+}
+
+
+
+/* Responsive tablet */
+@media (max-width: 900px) {
+
+  .top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .image {
+    flex: none;
+    width: 280px;
+  }
+
+
+  .tags {
+    justify-content: center;
+  }
+
+
+  .temporadas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+
+/* Responsive celular */
+@media (max-width: 500px) {
+
+  .card {
+    padding: 25px;
+  }
+
+
+  .title {
+    font-size: 28px;
+  }
+
+
+  .temporadas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .image {
+    width: 220px;
+  }
+
+}
