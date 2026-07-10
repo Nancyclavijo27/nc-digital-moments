@@ -1,0 +1,304 @@
+.section{
+
+  padding:35px 0;
+
+}
+
+.card{
+
+  display:grid;
+
+  grid-template-columns:1.1fr .9fr;
+
+  align-items:center;
+
+  gap:40px;
+
+  padding:55px 60px;
+
+  border-radius:32px;
+
+  background:linear-gradient(
+      135deg,
+      #fff 0%,
+      #fff8fb 55%,
+      #fdeef4 100%
+  );
+
+  border:1px solid rgba(232,154,183,.18);
+
+  box-shadow:
+      0 15px 45px rgba(232,154,183,.10);
+
+}
+
+.content{
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+}
+
+.badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:rgba(232,154,183,.15);
+
+  color:var(--primary);
+
+  font-size:.9rem;
+
+  font-weight:600;
+
+  margin-bottom:22px;
+
+}
+
+.title{
+
+  font-size:3rem;
+
+  line-height:1.1;
+
+  font-weight:700;
+
+  color:#2b2b2b;
+
+  margin-bottom:12px;
+
+}
+
+.title span{
+
+  color:var(--primary);
+  font-size: 2.2rem;
+
+}
+
+.description{
+
+  max-width:560px;
+
+  font-size:1.05rem;
+
+  line-height:1.8;
+
+  color:#666;
+
+  margin-bottom:18px;
+
+}
+
+.services{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:14px;
+
+  margin-bottom:18px;
+
+}
+
+.service{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  background:#fff;
+
+  border:1px solid rgba(232,154,183,.18);
+
+  color:#444;
+
+  font-size:.92rem;
+
+  transition:.30s;
+
+}
+
+.service svg{
+
+  color:var(--primary);
+
+  font-size:1rem;
+
+}
+
+.service:hover{
+
+  transform:translateY(-3px);
+
+  border-color:var(--primary);
+
+  box-shadow:0 10px 25px rgba(232,154,183,.18);
+
+}
+
+.buttons{
+
+  display:flex;
+
+  gap:16px;
+
+  flex-wrap:wrap;
+
+}
+
+.image{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+.image img{
+
+  width:100%;
+
+  max-width:470px;
+
+  object-fit:contain;
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media(max-width:992px){
+
+.card{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    padding:45px;
+
+}
+
+.content{
+
+    align-items:center;
+
+}
+
+.description{
+
+    max-width:100%;
+
+}
+
+.services{
+
+    justify-content:center;
+
+}
+
+.buttons{
+
+    justify-content:center;
+
+}
+
+.image{
+
+    margin-top:25px;
+
+}
+
+.image img{
+
+    max-width:360px;
+
+}
+
+}
+
+/* ---------- Celular ---------- */
+
+@media(max-width:768px){
+
+.section{
+
+    padding:60px 0;
+
+}
+
+.card{
+
+    padding:32px 24px;
+
+    border-radius:24px;
+
+}
+
+.title{
+
+    font-size:2.2rem;
+
+}
+
+.description{
+
+    font-size:.95rem;
+
+}
+
+.services{
+
+    gap:10px;
+
+}
+
+.service{
+
+    font-size:.82rem;
+
+    padding:8px 12px;
+
+}
+
+.image img{
+
+    max-width:270px;
+
+}
+
+.buttons{
+
+    width:100%;
+
+    flex-direction:column;
+
+}
+
+.buttons a{
+
+    width:100%;
+
+}
+
+}
