@@ -1,6 +1,7 @@
 import styles from "./Hero.module.css";
 
 import Button from "../Button/Button";
+
 import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
 
 import heroImage from "../../assets/images/hero.png";
@@ -44,9 +45,11 @@ function Hero() {
 
             <div className={styles.buttons}>
 
-              <Button>
-                Ver catálogo
-              </Button>
+              <Button
+  to="/invitaciones"
+>
+  Explorar invitaciones
+</Button>
 
               <WhatsAppButton />
 

@@ -3,7 +3,7 @@ import styles from "./cta.module.css";
 import Button from "../Button/Button";
 import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
 
-import ilustracion from "../../assets/illustrations/card.svg";
+import ilustracion from "../../assets/images/idea.png";
 
 function CTA() {
 
@@ -42,11 +42,10 @@ function CTA() {
             <div className={styles.buttons}>
 
               <Button
-                href="/catalogo"
-                variant="primary"
-              >
-                Ver colección
-              </Button>
+  to="/invitaciones"
+>
+  invitaciones
+</Button>
 
               <WhatsAppButton
                 text="Hablemos"

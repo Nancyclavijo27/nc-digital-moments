@@ -1,0 +1,127 @@
+.prices {
+  padding: 80px 0;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: #fdeef4;
+  color: #d63384;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.header p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card h3 {
+  color: #d63384;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card li {
+  padding: 8px 0;
+  color: #444;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.card li:last-child {
+  border-bottom: none;
+}
+
+.note {
+  max-width: 800px;
+  margin: 60px auto 0;
+  text-align: center;
+}
+
+.note p {
+  color: #777;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 992px) {
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* ---------- Celular ---------- */
+
+@media (max-width: 768px) {
+
+  .prices {
+    padding: 60px 0;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+}
