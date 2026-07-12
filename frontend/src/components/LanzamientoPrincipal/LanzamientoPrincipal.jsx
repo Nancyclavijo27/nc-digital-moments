@@ -1,7 +1,7 @@
 import styles from "./LanzamientoPrincipal.module.css";
 import Button from "../Button/Button";
 
-import amorImg from "../../assets/illustrations/amistad.png";
+import amorImg from "../../assets/images/amor.png";
 
 import {
   FaHeart,

@@ -3,7 +3,7 @@ import styles from "./cta.module.css";
 import Button from "../Button/Button";
 import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
 
-import ilustracion from "../../assets/images/idea.png";
+import ilustracion from "../../assets/images/creatividad.png";
 
 function CTA() {
 

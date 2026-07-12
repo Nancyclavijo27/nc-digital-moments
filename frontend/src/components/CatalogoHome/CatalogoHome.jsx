@@ -2,7 +2,7 @@ import styles from "./CatalogoHome.module.css";
 
 import TarjetaCatalogo from "./TarjetaCatalogo/TarjetaCatalogo";
 
-import cumple from "../../assets/images/cumple.jpg";
+import cumple from "../../assets/images/cumpleaños.png";
 import boda from "../../assets/images/matri.jpg";
 import baby from "../../assets/images/bebe.jpg";
 import quince from "../../assets/images/15Años.png";
