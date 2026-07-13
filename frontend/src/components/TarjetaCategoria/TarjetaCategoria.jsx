@@ -41,7 +41,7 @@ className={styles.card}
 
 <div className={styles.link}>
 
-Ver diseños
+Explorar colección
 
 <FaArrowRight/>
 

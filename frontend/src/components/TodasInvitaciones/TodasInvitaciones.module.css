@@ -1,16 +1,12 @@
 .section {
 
-  .section {
-
-padding:60px 0;
+  padding: 30px 0;
 
 }
 
-}
-
-/*=========================
+/*==========================
 BADGE
-=========================*/
+==========================*/
 
 .badge {
 
@@ -22,7 +18,7 @@ BADGE
 
   padding: 10px 18px;
 
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
   border-radius: 999px;
 
@@ -36,29 +32,31 @@ BADGE
 
 }
 
-/*=========================
+/*==========================
 TÍTULO
-=========================*/
+==========================*/
 
 .title {
 
-  font-size: clamp(2.3rem,4vw,3.4rem);
+  margin-bottom: 18px;
+
+  font-size: clamp(2.2rem,4vw,3.2rem);
 
   font-weight: 700;
 
   color: var(--text);
 
-  margin-bottom: 18px;
-
 }
 
-/*=========================
+/*==========================
 SUBTÍTULO
-=========================*/
+==========================*/
 
 .subtitle {
 
-  max-width: 720px;
+  max-width: 700px;
+
+  margin-bottom: 55px;
 
   color: var(--text-light);
 
@@ -66,42 +64,38 @@ SUBTÍTULO
 
   line-height: 1.8;
 
-  margin-bottom: 50px;
-
 }
 
-/*=========================
+/*==========================
 GRID
-=========================*/
+==========================*/
 
 .grid {
 
-display:grid;
+  display:grid;
 
-grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(4,1fr);
 
-gap:20px;
+  gap:22px;
 
 }
-
-
-/*=========================
+/*==========================
 TABLET
-=========================*/
+==========================*/
 
-@media(max-width:1100px){
+@media(max-width:992px){
 
 .grid{
 
-grid-template-columns:repeat(2,1fr);
+gap:24px;
 
 }
 
 }
 
-/*=========================
+/*==========================
 MÓVIL
-=========================*/
+==========================*/
 
 @media(max-width:768px){
 
@@ -128,8 +122,6 @@ margin-bottom:35px;
 .grid{
 
 grid-template-columns:1fr;
-
-gap:22px;
 
 }
 
