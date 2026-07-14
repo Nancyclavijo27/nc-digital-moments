@@ -1,6 +1,6 @@
 import CategoriaHero from "../../components/CategoriaHero/CategoriaHero";
 import CategoriasInvitaciones from "../../components/CategoriasInvitaciones/CategoriasInvitaciones";
-import InvitacionDestacada from "../../components/InvitacionDestacada/InvitacionDestacada";
+import InvitacionDestacada from "../../components/Invitaciones/InvitacionDestacada/InvitacionDestacada";
 import TodasInvitaciones from "../../components/TodasInvitaciones/TodasInvitaciones";
 import CTA from "../../components/CTA/cta";
 

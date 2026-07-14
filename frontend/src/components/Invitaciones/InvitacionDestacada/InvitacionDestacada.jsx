@@ -1,6 +1,6 @@
 import styles from "./InvitacionDestacada.module.css";
 
-import Button from "../Button/Button";
+import Button from "../../Button/Button";
 
 import {
 
@@ -14,7 +14,7 @@ import {
 
 } from "react-icons/fa";
 
-import portada from "../../assets/images/cumpleaños.png";
+import portada from "../../../assets/images/cumpleaños.png";
 
 function InvitacionDestacada() {
 
@@ -53,20 +53,15 @@ function InvitacionDestacada() {
           <div className={styles.content}>
 
             <h2>
+  Eterno Amor
+</h2>
 
-              Cumpleaños Elegante
-
-            </h2>
-
-            <p>
-
-              Una invitación digital moderna y totalmente personalizada.
-
-              Diseñada para convertir un momento especial en una experiencia
-
-              inolvidable.
-
-            </p>
+<p>
+  Una invitación digital elegante diseñada para bodas.
+  Personalízala con tus fotos, música, ubicación,
+  confirmación de asistencia y mucho más para crear una
+  experiencia inolvidable para tus invitados.
+</p>
 
             <div className={styles.features}>
 
@@ -104,11 +99,7 @@ function InvitacionDestacada() {
 
             </div>
 
-            <Button
-
-              href="/invitaciones/cumpleanos/elegante"
-
-              variant="primary"
+            <Button to="/demoinvitacion"
 
             >
 

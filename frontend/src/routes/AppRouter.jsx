@@ -8,6 +8,7 @@ import Nosotros from "../pages/Nosotros/Nosotros";
 import Servicios from "../pages/Servicios/Servicios";
 import Precios from "../pages/Precios/Precios";
 import Contacto from "../pages/Contacto/Contacto";
+import DemoInvitacion from "../pages/DemoInvitacion/DemoInvitacion";
 
 function AppRouter() {
   return (
@@ -31,6 +32,15 @@ function AppRouter() {
             </Layout>
           }
         />
+
+        <Route
+  path="/demoinvitacion"
+  element={
+    <Layout>
+      <DemoInvitacion />
+    </Layout>
+  }
+/>
 
         <Route
           path="/servicios"
