@@ -4,16 +4,15 @@ import styles from "./Portada.module.css";
 function Portada({ portada }) {
 
 
-const irApertura = () => {
+const irPresentacion = () => {
 
- document
- .getElementById("apertura")
- ?.scrollIntoView({
-   behavior:"smooth"
- });
+  document
+    .getElementById("presentacion")
+    ?.scrollIntoView({
+      behavior:"smooth"
+    });
 
 };
-
 
 
 return (
@@ -35,7 +34,9 @@ backgroundImage:`url(${portada.imagen})`
 <div className={styles.content}>
 
 
-
+<span className={styles.brand}>
+✨ NC Digital Moments
+</span>
 
 <span className={styles.modelo}>
 {portada.titulo}
@@ -66,27 +67,13 @@ backgroundImage:`url(${portada.imagen})`
 
 className={styles.button}
 
-onClick={irApertura}
+onClick={irPresentacion}
 
 >
 
 Celebrar con nosotros
 
 </button>
-
-
-
-
-<span className={styles.scroll}>
-
-Desliza para descubrir ↓
-
-</span>
-
-
-<span className={styles.brand}>
-✨ NC Digital Moments
-</span>
 
 
 
