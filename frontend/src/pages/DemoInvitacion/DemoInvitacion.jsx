@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./DemoInvitacion.module.css";
 
 import boda from "../../data/modelos/boda";
@@ -20,6 +21,15 @@ import MensajeFinal from "../../components/Invitaciones/Plantilla/MensajeFinal/M
 
 
 function DemoInvitacion(){
+
+  useEffect(() => {
+
+    window.scrollTo({
+      top:0,
+      behavior:"instant"
+    });
+
+  }, []);
 
 
 return(

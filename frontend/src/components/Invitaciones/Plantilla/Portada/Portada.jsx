@@ -1,10 +1,19 @@
+import { useEffect, useState } from "react";
 import styles from "./Portada.module.css";
 
 
 function Portada({ portada }) {
 
+  const [mostrar, setMostrar] = useState(false);
 
-const irPresentacion = () => {
+  useEffect(() => {
+
+    setMostrar(true);
+
+  }, []);
+
+
+const irSeccion = () => {
 
   document
     .getElementById("presentacion")
@@ -31,7 +40,11 @@ backgroundImage:`url(${portada.imagen})`
 <div className={styles.overlay}></div>
 
 
-<div className={styles.content}>
+<div
+  className={`${styles.content} ${
+    mostrar ? styles.visible : ""
+  }`}
+>
 
 
 <span className={styles.brand}>
@@ -67,11 +80,11 @@ backgroundImage:`url(${portada.imagen})`
 
 className={styles.button}
 
-onClick={irPresentacion}
+onClick={irSeccion}
 
 >
 
-Celebrar con nosotros
+Descubrir nuestra historia
 
 </button>
 

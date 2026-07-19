@@ -1,5 +1,18 @@
 import portadaBoda from "../../assets/images/boda/anillos.png";
+import floresSuperiores from "../../assets/images/boda/floress.png";
+import floresInferiores from "../../assets/images/boda/floresi.png";
+import argollas from "../../assets/images/boda/argollas.png";
+import separador from "../../assets/images/boda/separador.png";
+import sobre from "../../assets/images/boda/sobre.png";
+//import papel from "../../assets/images/boda/papel.png";
+import floresLaterales from "../../assets/images/boda/florsuperizq.png";
+import piefloral from "../../assets/images/boda/pieflor.png";
 
+// Pendientes
+// import sello from "../../assets/images/boda/sello-cera.png";
+// import textura from "../../assets/images/boda/textura-papel.png";
+// import destellos from "../../assets/images/boda/destellos.png";
+// import ramas from "../../assets/images/boda/ramas.png";
 
 const boda = {
 
@@ -21,35 +34,82 @@ const boda = {
     imagen: portadaBoda,
 
     boton: "Descubrir nuestra historia",
+    scroll:"presentacion"
 
   },
 
   
 
   /*=====================================
-    PRESENTACIÓN
-  =====================================*/
+  PRESENTACIÓN
+=====================================*/
 
-  presentacion: {
+presentacion: {
 
-    titulo: "Con inmensa alegría",
+  tipo: "sobre",
 
-    mensaje:
+  titulo: "Con inmensa alegría",
+
+  subtitulo: "Nuestra Invitación",
+
+  mensaje:
 `Después de caminar juntos durante este hermoso camino,
 hemos decidido dar el paso más importante de nuestras vidas.
 
 Más que una invitación, queremos compartir contigo
 la felicidad de este nuevo comienzo.
 
-Tu presencia hará que este día sea aún más especial
-y quedará para siempre en nuestros recuerdos.`,
+Cada sonrisa, cada abrazo y cada instante
+serán aún más especiales si podemos vivirlos
+junto a las personas que han formado parte
+de nuestra historia.
 
-    firma: "María & Juan",
+Será un honor contar con tu presencia
+en el día más importante de nuestras vidas.`,
 
-    boton: "Continuar",
+  firma: "María & Juan",
 
-  },
+  textoSobre: "Una invitación especial",
 
+  botonAbrir: "Abrir invitación",
+
+  botonContinuar: "Continuar",
+
+  scroll: "bienvenida",
+
+  animacion: "abrirSobre",
+
+  imagenes: {
+
+    sobre,
+
+    floresSuperiores,
+
+    floresInferiores,
+
+    floresLaterales,
+
+    piefloral,
+
+    argollas,
+
+    separador,
+
+    // Se agregarán cuando estén listas
+
+    sello: null,
+
+    textura: null,
+
+    destellos: null,
+
+    ramas: null
+
+  }
+
+},
+
+  
   /*=====================================
     BIENVENIDA
   =====================================*/

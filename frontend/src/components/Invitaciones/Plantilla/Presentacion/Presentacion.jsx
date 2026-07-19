@@ -1,14 +1,23 @@
+import { useState } from "react";
 import styles from "./Presentacion.module.css";
 
 function Presentacion({ presentacion }) {
 
+  const [abierto, setAbierto] = useState(false);
+
   const continuar = () => {
 
-    document
-      .getElementById("bienvenida")
-      ?.scrollIntoView({
-        behavior: "smooth",
-      });
+    setAbierto(false);
+
+    setTimeout(() => {
+
+      document
+        .getElementById(presentacion.scroll)
+        ?.scrollIntoView({
+          behavior: "smooth",
+        });
+
+    }, 500);
 
   };
 
@@ -19,43 +28,117 @@ function Presentacion({ presentacion }) {
       id="presentacion"
     >
 
-      <div className={styles.paper}>
+      {/* Fondo oscuro */}
 
-        <span className={styles.subtitle}>
+      <div
+        className={`${styles.overlay} ${
+          abierto ? styles.overlayVisible : ""
+        }`}
+      />
 
-          Una invitación especial
+      {/* ======================
+            SOBRE
+      ====================== */}
 
-        </span>
+      {!abierto && (
 
-        <h2>
+        <div
+          className={styles.envelope}
+          onClick={() => setAbierto(true)}
+        >
 
-          {presentacion.titulo}
+          <img
+            src={presentacion.imagenes.sobre}
+            alt="Sobre"
+            className={styles.sobre}
+          />
 
-        </h2>
+          <img
+            src={presentacion.imagenes.argollas}
+            alt=""
+            className={styles.argollas}
+          />
 
-        <p>
+          <button className={styles.openButton}>
 
-          {presentacion.mensaje}
+            {presentacion.botonAbrir}
 
-        </p>
-
-        <div className={styles.signature}>
-
-          {presentacion.firma}
+          </button>
 
         </div>
 
-        <button
+      )}
 
-          onClick={continuar}
+      {/* ======================
+            CARTA
+      ====================== */}
 
-          className={styles.button}
+      <div
+        className={`${styles.paperContainer} ${
+          abierto ? styles.paperVisible : ""
+        }`}
+      >
 
-        >
+        <img
+          src={presentacion.imagenes.papel}
+          alt=""
+          className={styles.paper}
+        />
 
-          {presentacion.boton}
+        <div className={styles.content}>
 
-        </button>
+          <img
+            src={presentacion.imagenes.floresSuperiores}
+            alt=""
+            className={styles.topFlowers}
+          />
+
+          <span className={styles.subtitle}>
+
+            Nuestra Invitación
+
+          </span>
+
+          <h2>
+
+            {presentacion.titulo}
+
+          </h2>
+
+          <img
+            src={presentacion.imagenes.separador}
+            alt=""
+            className={styles.separator}
+          />
+
+          <p>
+
+            {presentacion.mensaje}
+
+          </p>
+
+          <div className={styles.signature}>
+
+            {presentacion.firma}
+
+          </div>
+
+          <button
+            className={styles.button}
+            onClick={continuar}
+          >
+
+            {presentacion.botonContinuar}
+
+          </button>
+
+          <img
+            src={presentacion.imagenes.pieFloral}
+            alt=""
+            className={styles.bottomFlowers}
+          />
+
+        </div>
 
       </div>
 
