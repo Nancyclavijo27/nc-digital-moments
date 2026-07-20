@@ -1,3 +1,7 @@
+/*==========================================
+=            PRESENTACIÓN
+==========================================*/
+
 .section{
 
     position:relative;
@@ -6,61 +10,122 @@
 
     min-height:100vh;
 
+    overflow:hidden;
+
     display:flex;
 
     justify-content:center;
 
     align-items:center;
 
-    overflow:hidden;
-
-    padding:80px 20px;
+    background:
+    linear-gradient(
+        180deg,
+        #fffdf8 0%,
+        #fffaf3 100%
+    );
 
 }
 
+/*==========================================
+=            DECORACIONES
+==========================================*/
 
-/*==========================
-FONDO OSCURO
-==========================*/
+.floresSuperior{
 
-.overlay{
+    position:absolute;
 
-    position:fixed;
+    top:0;
+
+    left:0;
+
+    width:340px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+.floresInferior{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:290px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+.ramas{
+
+    position:absolute;
+
+    top:60px;
+
+    left:60px;
+
+    width:180px;
+
+    opacity:.18;
+
+    z-index:1;
+
+}
+
+.destellos{
+
+    position:absolute;
 
     inset:0;
 
-    background:rgba(0,0,0,.35);
+    width:100%;
 
-    backdrop-filter:blur(5px);
+    height:100%;
 
-    opacity:0;
+    object-fit:cover;
 
-    visibility:hidden;
+    opacity:.35;
 
-    transition:.5s;
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.argollas{
+
+    position:absolute;
+
+    top:45px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:58px;
 
     z-index:5;
 
 }
 
-.overlayVisible{
+/*==========================================
+=          CONTENEDOR
+==========================================*/
 
-    opacity:1;
-
-    visibility:visible;
-
-}
-
-
-/*==========================
-SOBRE
-==========================*/
-
-.envelope{
+.sobreContainer{
 
     position:relative;
 
-    z-index:20;
+    width:100%;
+
+    max-width:1200px;
 
     display:flex;
 
@@ -68,92 +133,253 @@ SOBRE
 
     align-items:center;
 
-    cursor:pointer;
+    justify-content:center;
 
-    animation:flotar 4s ease-in-out infinite;
+    gap:18px;
+
+    z-index:5;
+
+    padding:120px 20px;
 
 }
+
+/*==========================================
+=          TEXTO
+==========================================*/
+
+.infoSobre{
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+.infoSobre span{
+
+    display:block;
+
+    color:#b89350;
+
+    font-size:.95rem;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.infoSobre h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:4rem;
+
+    color:#5e4949;
+
+    font-weight:400;
+
+    margin-bottom:20px;
+
+}
+
+.infoSobre p{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.8rem;
+
+    color:#8d6d58;
+
+}
+
+/*==========================================
+=            SOBRE
+==========================================*/
 
 .sobre{
 
-    width:420px;
+    position:relative;
+
+    width:520px;
 
     max-width:90%;
 
-    transition:.4s;
+    z-index:5;
+
+    display:block;
+
+    filter:
+
+        drop-shadow(0 30px 45px rgba(177,145,84,.22));
+
+    animation:
+
+        flotarSobre 5s ease-in-out infinite;
+
+    transition:.45s;
 
 }
 
-.envelope:hover .sobre{
+.sobre:hover{
 
-    transform:scale(1.03);
+    transform:
+
+        translateY(-8px)
+        rotate(-2deg)
+        scale(1.02);
 
 }
 
+/*==========================================
+=            SELLO
+==========================================*/
 
-/*==========================
-ARGOLLAS
-==========================*/
-
-.argollas{
+.sello{
 
     position:absolute;
 
-    width:90px;
+    width:95px;
 
-    top:25px;
+    left:50%;
 
-    right:40px;
+    top:56%;
 
-    animation:rotar 10s linear infinite;
+    transform:translate(-50%,-50%);
+
+    z-index:10;
+
+    pointer-events:none;
+
+    filter:
+
+        drop-shadow(0 10px 12px rgba(0,0,0,.25));
+
+    animation:
+
+        respirar 3s ease-in-out infinite;
 
 }
 
+/*==========================================
+=            BOTÓN
+==========================================*/
 
-/*==========================
-BOTÓN
-==========================*/
+.button{
 
-.openButton{
-
-    margin-top:30px;
+    margin-top:35px;
 
     border:none;
 
     cursor:pointer;
 
-    padding:15px 35px;
+    padding:18px 45px;
 
-    border-radius:30px;
+    border-radius:40px;
 
-    background:linear-gradient(
-        135deg,
-        #c8a04d,
-        #a77d38
-    );
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
 
     color:white;
 
-    font-size:.95rem;
+    background:
+
+        linear-gradient(
+            135deg,
+            #cfa75b,
+            #b48639
+        );
+
+    box-shadow:
+
+        0 18px 35px rgba(180,140,70,.28);
 
     transition:.35s;
 
-    box-shadow:0 15px 35px rgba(167,125,56,.25);
+}
+
+.button:hover{
+
+    transform:
+
+        translateY(-4px);
+
+    box-shadow:
+
+        0 25px 45px rgba(180,140,70,.35);
 
 }
 
-.openButton:hover{
+/*==========================================
+=            ANIMACIONES
+==========================================*/
 
-    transform:translateY(-4px);
+@keyframes flotarSobre{
+
+    0%{
+
+        transform:
+        translateY(0px)
+        rotate(-2deg);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-12px)
+        rotate(1deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0px)
+        rotate(-2deg);
+
+    }
 
 }
 
+@keyframes respirar{
 
-/*==========================
-CARTA
-==========================*/
+    0%{
 
-.paperContainer{
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(1.06);
+
+    }
+
+    100%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+
+    }
+
+}
+
+/*==========================================
+=            MODAL
+==========================================*/
+
+.modal{
 
     position:fixed;
 
@@ -165,295 +391,261 @@ CARTA
 
     align-items:center;
 
-    opacity:0;
-
-    visibility:hidden;
-
-    transform:scale(.85);
-
-    transition:.6s;
-
-    z-index:30;
+    z-index:999;
 
 }
 
-.paperVisible{
-
-    opacity:1;
-
-    visibility:visible;
-
-    transform:scale(1);
-
-}
-
-
-/*==========================
-PAPEL
-==========================*/
-
-.paper{
-
-    width:720px;
-
-    max-width:92%;
+.overlay{
 
     position:absolute;
 
-    filter:
+    inset:0;
 
-    drop-shadow(0 25px 60px rgba(0,0,0,.18));
+    background:rgba(25,20,18,.55);
+
+    backdrop-filter:blur(10px);
+
+    animation:fadeIn .45s ease;
 
 }
 
+/*==========================================
+=            CARTA
+==========================================*/
 
-/*==========================
-CONTENIDO
-==========================*/
-
-.content{
+.carta{
 
     position:relative;
 
-    z-index:5;
+    width:min(92%,700px);
 
-    width:620px;
+    max-height:88vh;
 
-    max-width:82%;
+    overflow:auto;
+
+    border-radius:28px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        #fffefc,
+
+        #fffaf3
+
+    );
+
+    box-shadow:
+
+        0 40px 90px rgba(0,0,0,.25);
+
+    animation:
+
+        subirCarta .55s ease;
+
+    z-index:1000;
+
+    padding:70px 55px 60px;
+
+}
+
+/* Scroll elegante */
+
+.carta::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.carta::-webkit-scrollbar-thumb{
+
+    background:#d8c19d;
+
+    border-radius:20px;
+
+}
+
+.carta::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/*==========================================
+=            FLORES CARTA
+==========================================*/
+
+.modalFlorSuperior{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:230px;
+
+    opacity:.95;
+
+}
+
+.modalFlorInferior{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:220px;
+
+    opacity:.95;
+
+}
+
+/*==========================================
+=            CONTENIDO
+==========================================*/
+
+.contenido{
+
+    position:relative;
+
+    z-index:3;
 
     text-align:center;
 
-    padding:90px 70px;
-
 }
 
-
-/*==========================
-FLORES
-==========================*/
-
-.topFlowers{
-
-    width:180px;
-
-    margin-bottom:20px;
-
-}
-
-.bottomFlowers{
-
-    width:180px;
-
-    margin-top:35px;
-
-}
-
-
-/*==========================
-SUBTÍTULO
-==========================*/
-
-.subtitle{
+.contenido span{
 
     display:block;
 
-    color:#b08d57;
-
-    letter-spacing:5px;
+    color:#b78d48;
 
     text-transform:uppercase;
 
-    font-size:.75rem;
+    letter-spacing:4px;
+
+    font-size:.82rem;
 
     margin-bottom:18px;
 
 }
 
+.contenido h2{
 
-/*==========================
-TÍTULO
-==========================*/
+    font-family:
 
-.content h2{
+    "Playfair Display",serif;
 
-    font-family:"Playfair Display",serif;
+    font-size:3.2rem;
 
-    font-size:2.7rem;
+    font-weight:400;
 
-    color:#5b4545;
+    color:#5a4646;
 
-    margin-bottom:20px;
-
-    font-weight:500;
+    margin-bottom:25px;
 
 }
 
+.separador{
 
-/*==========================
-SEPARADOR
-==========================*/
-
-.separator{
-
-    width:160px;
+    width:220px;
 
     margin:20px auto 35px;
 
+    display:block;
+
 }
 
+.contenido p{
 
-/*==========================
-MENSAJE
-==========================*/
+    font-family:
 
-.content p{
+    "Cormorant Garamond",serif;
+
+    font-size:1.35rem;
+
+    line-height:2.1rem;
+
+    color:#645454;
+
+    max-width:540px;
+
+    margin:auto;
 
     white-space:pre-line;
 
-    line-height:2;
+}
 
-    color:#645656;
+.firma{
 
-    font-size:1.05rem;
+    margin-top:45px;
 
-    font-family:"Cormorant Garamond",serif;
+    font-family:
+
+    "Great Vibes",cursive;
+
+    font-size:3rem;
+
+    color:#b3884d;
 
 }
 
+/*==========================================
+=            BOTÓN CARTA
+==========================================*/
 
-/*==========================
-FIRMA
-==========================*/
+.carta .button{
 
-.signature{
-
-    margin-top:40px;
-
-    margin-bottom:30px;
-
-    font-size:2rem;
-
-    font-family:"Great Vibes",cursive;
-
-    color:#9d7b44;
+    margin-top:45px;
 
 }
 
+/*==========================================
+=            ANIMACIONES
+==========================================*/
 
-/*==========================
-BOTÓN
-==========================*/
+@keyframes fadeIn{
 
-.button{
+from{
 
-    border:none;
-
-    cursor:pointer;
-
-    padding:15px 40px;
-
-    border-radius:40px;
-
-    background:linear-gradient(
-        135deg,
-        #c8a04d,
-        #a77d38
-    );
-
-    color:white;
-
-    font-size:1rem;
-
-    transition:.35s;
+opacity:0;
 
 }
 
-.button:hover{
+to{
 
-    transform:translateY(-4px);
-
-}
-
-
-/*==========================
-ANIMACIONES
-==========================*/
-
-@keyframes flotar{
-
-    0%,100%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-10px);
-
-    }
+opacity:1;
 
 }
 
-@keyframes rotar{
+}
 
-    from{
+@keyframes subirCarta{
 
-        transform:rotate(0deg);
+from{
 
-    }
+opacity:0;
 
-    to{
+transform:
 
-        transform:rotate(360deg);
-
-    }
+translateY(80px)
+scale(.90);
 
 }
 
+to{
 
-/*==========================
-RESPONSIVE
-==========================*/
+opacity:1;
 
-@media(max-width:768px){
+transform:
 
-.content{
-
-padding:70px 35px;
-
-}
-
-.content h2{
-
-font-size:2rem;
-
-}
-
-.content p{
-
-font-size:1rem;
-
-line-height:1.8;
-
-}
-
-.paper{
-
-width:95%;
-
-}
-
-.topFlowers,
-.bottomFlowers{
-
-width:130px;
-
-}
-
-.sobre{
-
-width:320px;
+translateY(0)
+scale(1);
 
 }
 

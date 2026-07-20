@@ -4,15 +4,15 @@ import floresInferiores from "../../assets/images/boda/floresi.png";
 import argollas from "../../assets/images/boda/argollas.png";
 import separador from "../../assets/images/boda/separador.png";
 import sobre from "../../assets/images/boda/sobre.png";
-//import papel from "../../assets/images/boda/papel.png";
+import papel from "../../assets/images/boda/papel.png";
 import floresLaterales from "../../assets/images/boda/florsuperizq.png";
 import piefloral from "../../assets/images/boda/pieflor.png";
 
 // Pendientes
-// import sello from "../../assets/images/boda/sello-cera.png";
+import sello from "../../assets/images/boda/sello.png";
 // import textura from "../../assets/images/boda/textura-papel.png";
-// import destellos from "../../assets/images/boda/destellos.png";
-// import ramas from "../../assets/images/boda/ramas.png";
+import destellos from "../../assets/images/boda/destellos.png";
+import ramas from "../../assets/images/boda/ramas.png";
 
 const boda = {
 
@@ -44,68 +44,60 @@ const boda = {
   PRESENTACIÓN
 =====================================*/
 
-presentacion: {
+presentacion:{
 
-  tipo: "sobre",
+    tipo:"sobre",
 
-  titulo: "Con inmensa alegría",
+    titulo:"Con inmensa alegría",
 
-  subtitulo: "Nuestra Invitación",
+    subtitulo:"Tenemos el honor de invitarte",
 
-  mensaje:
+    mensaje:
+
 `Después de caminar juntos durante este hermoso camino,
-hemos decidido dar el paso más importante de nuestras vidas.
+hemos decidido unir nuestras vidas para siempre.
 
-Más que una invitación, queremos compartir contigo
-la felicidad de este nuevo comienzo.
+Hoy queremos abrir nuestro corazón y compartir
+contigo la felicidad de este nuevo comienzo.
 
-Cada sonrisa, cada abrazo y cada instante
-serán aún más especiales si podemos vivirlos
-junto a las personas que han formado parte
-de nuestra historia.
+Tu presencia hará de este día un recuerdo
+inolvidable para nosotros.`,
 
-Será un honor contar con tu presencia
-en el día más importante de nuestras vidas.`,
+    firma:"María & Juan",
 
-  firma: "María & Juan",
+    boton:"Abrir invitación",
 
-  textoSobre: "Una invitación especial",
+    botonCerrar:"Cerrar y continuar",
 
-  botonAbrir: "Abrir invitación",
+    scroll:"bienvenida",
 
-  botonContinuar: "Continuar",
+    animacion:"abrirSobre",
 
-  scroll: "bienvenida",
+    imagenes:{
 
-  animacion: "abrirSobre",
+        sobre,
 
-  imagenes: {
+        sello,
 
-    sobre,
+        papel,
 
-    floresSuperiores,
+        floresSuperiores,
 
-    floresInferiores,
+        floresInferiores,
 
-    floresLaterales,
+        floresLaterales,
 
-    piefloral,
+        argollas,
 
-    argollas,
+        separador,
 
-    separador,
+        ramas,
 
-    // Se agregarán cuando estén listas
+        destellos,
 
-    sello: null,
+        piefloral
 
-    textura: null,
-
-    destellos: null,
-
-    ramas: null
-
-  }
+    }
 
 },
 

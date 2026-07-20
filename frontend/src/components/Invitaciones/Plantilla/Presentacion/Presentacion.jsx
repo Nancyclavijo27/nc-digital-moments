@@ -5,7 +5,13 @@ function Presentacion({ presentacion }) {
 
   const [abierto, setAbierto] = useState(false);
 
-  const continuar = () => {
+  const abrirInvitacion = () => {
+
+    setAbierto(true);
+
+  };
+
+  const cerrarInvitacion = () => {
 
     setAbierto(false);
 
@@ -17,85 +23,78 @@ function Presentacion({ presentacion }) {
           behavior: "smooth",
         });
 
-    }, 500);
+    }, 300);
 
   };
 
   return (
 
     <section
-      className={styles.section}
       id="presentacion"
+      className={styles.section}
     >
 
-      {/* Fondo oscuro */}
+      {/* FLORES DECORATIVAS */}
 
-      <div
-        className={`${styles.overlay} ${
-          abierto ? styles.overlayVisible : ""
-        }`}
+      <img
+        src={presentacion.imagenes.floresSuperiores}
+        alt=""
+        className={styles.floresSuperior}
       />
 
-      {/* ======================
-            SOBRE
-      ====================== */}
+      <img
+        src={presentacion.imagenes.floresInferiores}
+        alt=""
+        className={styles.floresInferior}
+      />
 
-      {!abierto && (
+      {/* RAMAS */}
 
-        <div
-          className={styles.envelope}
-          onClick={() => setAbierto(true)}
-        >
+      <img
+        src={presentacion.imagenes.ramas}
+        alt=""
+        className={styles.ramas}
+      />
 
-          <img
-            src={presentacion.imagenes.sobre}
-            alt="Sobre"
-            className={styles.sobre}
-          />
+      {/* DESTELLOS */}
 
-          <img
-            src={presentacion.imagenes.argollas}
-            alt=""
-            className={styles.argollas}
-          />
+      <img
+        src={presentacion.imagenes.destellos}
+        alt=""
+        className={styles.destellos}
+      />
 
-          <button className={styles.openButton}>
+      {/* ARGOLLAS */}
 
-            {presentacion.botonAbrir}
+      <img
+        src={presentacion.imagenes.argollas}
+        alt=""
+        className={styles.argollas}
+      />
 
-          </button>
-
-        </div>
-
-      )}
-
-      {/* ======================
-            CARTA
-      ====================== */}
+      {/* SOBRE */}
 
       <div
-        className={`${styles.paperContainer} ${
-          abierto ? styles.paperVisible : ""
-        }`}
+        className={styles.sobreContainer}
       >
 
         <img
-          src={presentacion.imagenes.papel}
-          alt=""
-          className={styles.paper}
+          src={presentacion.imagenes.sobre}
+          alt="Sobre"
+          className={styles.sobre}
         />
 
-        <div className={styles.content}>
+        <img
+          src={presentacion.imagenes.sello}
+          alt="Sello"
+          className={styles.sello}
+        />
 
-          <img
-            src={presentacion.imagenes.floresSuperiores}
-            alt=""
-            className={styles.topFlowers}
-          />
+        <div className={styles.infoSobre}>
 
-          <span className={styles.subtitle}>
+          <span>
 
-            Nuestra Invitación
+            {presentacion.subtitulo}
 
           </span>
 
@@ -105,42 +104,108 @@ function Presentacion({ presentacion }) {
 
           </h2>
 
-          <img
-            src={presentacion.imagenes.separador}
-            alt=""
-            className={styles.separator}
-          />
-
           <p>
-
-            {presentacion.mensaje}
-
-          </p>
-
-          <div className={styles.signature}>
 
             {presentacion.firma}
 
-          </div>
+          </p>
 
           <button
+
             className={styles.button}
-            onClick={continuar}
+
+            onClick={abrirInvitacion}
+
           >
 
-            {presentacion.botonContinuar}
+            {presentacion.boton}
 
           </button>
-
-          <img
-            src={presentacion.imagenes.pieFloral}
-            alt=""
-            className={styles.bottomFlowers}
-          />
 
         </div>
 
       </div>
+
+      {/* =========================
+            MODAL
+      ========================= */}
+
+      {abierto && (
+
+        <div className={styles.modal}>
+
+          <div
+            className={styles.overlay}
+            onClick={cerrarInvitacion}
+          ></div>
+
+          <div className={styles.carta}>
+
+            
+
+            <img
+              src={presentacion.imagenes.floresSuperiores}
+              alt=""
+              className={styles.modalFlorSuperior}
+            />
+
+            <img
+              src={presentacion.imagenes.floresInferiores}
+              alt=""
+              className={styles.modalFlorInferior}
+            />
+
+            <div className={styles.contenido}>
+
+              <span>
+
+                {presentacion.subtitulo}
+
+              </span>
+
+              <h2>
+
+                {presentacion.titulo}
+
+              </h2>
+
+              <img
+                src={presentacion.imagenes.separador}
+                alt=""
+                className={styles.separador}
+              />
+
+              <p>
+
+                {presentacion.mensaje}
+
+              </p>
+
+              <div className={styles.firma}>
+
+                {presentacion.firma}
+
+              </div>
+
+              <button
+
+                className={styles.button}
+
+                onClick={cerrarInvitacion}
+
+              >
+
+                {presentacion.botonCerrar}
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      )}
 
     </section>
 
